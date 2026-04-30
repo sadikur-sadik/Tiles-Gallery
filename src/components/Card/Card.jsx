@@ -3,6 +3,7 @@
 import { MdArrowForward } from "react-icons/md";
 
 import Image from "next/image";
+import Link from "next/link";
 
 
 const Card = (tile) => {
@@ -42,9 +43,11 @@ const Card = (tile) => {
       </div>
 
       <div>
-        <button className="btn btn-success w-full rounded-full mt-5 flex gap-1 items-center justify-center text-white text-bold">
-          <span>VIEW DETAILS</span><MdArrowForward className="h-5 w-5"/> 
-        </button>
+        <Link href={`/all-tiles/${id}`}>
+          <button className="btn btn-success w-full rounded-full mt-5 flex gap-1 items-center justify-center text-white text-bold">
+            <span>VIEW DETAILS</span><MdArrowForward className="h-5 w-5" />
+          </button>
+        </Link>
       </div>
     </div>
   );

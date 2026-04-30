@@ -2,7 +2,7 @@
   {
     "id": "tile_001",
     "title": "Ceramic Blue Tile",
-    "description": "Premium ceramic tile with blue glaze finish",
+    "description": "This tile features a deep, captivating blue glaze that adds a splash of vibrant color to any space. The premium ceramic construction ensures durability, while the high-gloss finish reflects light beautifully, making it an excellent choice for modern bathrooms or as a focal point in a contemporary kitchen. Its 60x60 cm dimensions offer a seamless look with fewer grout lines.",
     "image": "https://i.ibb.co.com/HL1zzsLv/Gemini-Generated-Image-qpzbmjqpzbmjqpzb.png",
     "category": "ceramic",
     "price": 45.99,
@@ -14,7 +14,7 @@
   {
     "id": "tile_002",
     "title": "Carrara White Marble",
-    "description": "Natural Italian marble with elegant grey veining",
+    "description": "Nothing says luxury like authentic Italian Carrara marble. Each 30x60 cm slab is unique, showcasing the natural, soft grey veining that has made this stone a staple of high-end architecture for centuries. It is the perfect choice for those looking to create a sophisticated, spa-like atmosphere in a primary suite or an elegant entryway.",
     "image": "https://i.ibb.co.com/ynBDFjWk/Gemini-Generated-Image-akhc33akhc33akhc.png",
     "category": "stone",
     "price": 89.50,
@@ -26,7 +26,7 @@
   {
     "id": "tile_003",
     "title": "Terracotta Rustic Square",
-    "description": "Traditional clay tile with an unglazed earthy finish",
+    "description": "Embrace the warmth of traditional craftsmanship with these unglazed clay tiles. The earthy, reddish-orange tones provide a rustic, Mediterranean feel that is perfect for sunrooms, farmhouse-style kitchens, or covered patios. Because they are unglazed, they offer a tactile, natural texture that feels grounded and authentic.",
     "image": "https://i.ibb.co.com/gLdr4Dbz/Gemini-Generated-Image-xxy9r7xxy9r7xxy9.png",
     "category": "terracotta",
     "price": 28.75,
@@ -38,7 +38,7 @@
   {
     "id": "tile_004",
     "title": "Matte Slate Grey",
-    "description": "Durable porcelain tile with a slate-textured surface",
+    "description": "Combining the rugged look of natural slate with the superior strength of porcelain, this tile is built for high-traffic areas. The matte, textured surface provides excellent slip resistance, while the large-format 60x120 cm size gives floors a grand, expansive appearance. It is ideal for industrial-chic lofts or modern commercial spaces.",
     "image": "https://i.ibb.co.com/xqcDLDvF/Gemini-Generated-Image-yh2a9syh2a9syh2a.png",
     "category": "porcelain",
     "price": 52.00,
@@ -50,7 +50,7 @@
   {
     "id": "tile_005",
     "title": "Emerald Glass Mosaic",
-    "description": "Small glass tiles for shimmering kitchen backsplashes",
+    "description": "Designed to catch and refract light, these small glass mosaic tiles feature a rich emerald green hue. They are specifically crafted for vertical surfaces like kitchen backsplashes or shower niches. The shimmering finish adds a jewel-like quality to the room, turning a functional wall into a piece of art.",
     "image": "https://i.ibb.co.com/7NbDYp0Z/Gemini-Generated-Image-ygafzfygafzfygaf.png",
     "category": "glass",
     "price": 15.99,
@@ -62,7 +62,7 @@
   {
     "id": "tile_006",
     "title": "Oak Wood-Look Plank",
-    "description": "High-definition wood grain print on water-resistant porcelain",
+    "description": "Get the timeless beauty of hardwood with the maintenance-free benefits of porcelain. Using high-definition printing technology, these 20x120 cm planks replicate the intricate grain and knots of natural oak. Unlike real wood, these are completely water-resistant, making them perfect for wood floors in bathrooms and basements.",
     "image": "https://i.ibb.co.com/rGzQZTrK/Gemini-Generated-Image-yevip4yevip4yevi.png",
     "category": "porcelain",
     "price": 64.20,
@@ -74,7 +74,7 @@
   {
     "id": "tile_007",
     "title": "Silver Travertine",
-    "description": "Honed and filled natural travertine with porous texture",
+    "description": "Travertine is a celebrated natural stone known for its characteristic porous texture and tonal depth. This Silver variant offers a palette of cool greys and warm beiges. The surface is professionally honed and filled to provide a smooth, flat finish that remains incredibly durable, making it a classic choice for indoor flooring.",
     "image": "https://i.ibb.co.com/VW9SjM4K/Gemini-Generated-Image-wtbkcjwtbkcjwtbk.png",
     "category": "stone",
     "price": 75.00,
@@ -86,7 +86,7 @@
   {
     "id": "tile_008",
     "title": "Polished Onyx Gold",
-    "description": "Luxurious high-gloss tile with translucent gold layers",
+    "description": "The pinnacle of opulence, this onyx-style tile features translucent-looking layers and dramatic gold striking. The high-gloss polished finish enhances the depth of the stone's pattern, creating a glowing effect under ambient lighting. It is a statement piece designed for luxury feature walls or low-traffic formal areas.",
     "image": "https://i.ibb.co.com/gMms3RxB/Gemini-Generated-Image-vucgrkvucgrkvucg.png",
     "category": "stone",
     "price": 110.00,
@@ -98,7 +98,7 @@
   {
     "id": "tile_009",
     "title": "Geometric Cement Tile",
-    "description": "Handmade encaustic cement tile with monochrome patterns",
+    "description": "Handmade and full of character, these encaustic cement tiles feature a bold monochrome geometric pattern. Each 20x20 cm tile contributes to a repeating design that brings a boutique hotel vibe to laundry rooms, entryways, or cafes. The matte finish is soft to the touch yet sturdy enough for daily wear.",
     "image": "https://i.ibb.co.com/VcXz8tmf/Gemini-Generated-Image-928a8z928a8z928a.png",
     "category": "cement",
     "price": 34.50,
@@ -110,7 +110,7 @@
   {
     "id": "tile_010",
     "title": "Sandstone Outdoor Slab",
-    "description": "Extra-thick anti-slip tile designed for garden paths",
+    "description": "Engineered specifically for the elements, this extra-thick porcelain slab mimics the organic look of sandstone. It features a specialized anti-slip coating, ensuring safety for garden paths, poolside decks, and outdoor walkways. It is resistant to frost, fading, and heavy foot traffic, making it a permanent solution for landscaping.",
     "image": "https://i.ibb.co.com/kgyPnQgQ/Gemini-Generated-Image-8y8phx8y8phx8y8p.png",
     "category": "porcelain",
     "price": 58.90,
@@ -122,7 +122,7 @@
   {
     "id": "tile_011",
     "title": "Hexagon Matte Black",
-    "description": "Modern hexagonal shape for contemporary floor designs",
+    "description": "Break away from traditional squares with the trendy hexagonal format. The matte black finish offers a bold, moody aesthetic that pairs perfectly with brass or gold fixtures. These are particularly popular for creating high-contrast honeycomb floor patterns in modern bathrooms or laundry rooms.",
     "image": "https://i.ibb.co.com/nq0Pcy3w/Gemini-Generated-Image-wqmt21wqmt21wqmt.png",
     "category": "ceramic",
     "price": 39.99,
@@ -134,7 +134,7 @@
   {
     "id": "tile_012",
     "title": "Subway Glossy Cream",
-    "description": "Classic rectangular subway tile for timeless wall decor",
+    "description": "A softer take on the traditional white subway tile, this glossy cream version provides a timeless and versatile backdrop. The 10x30 cm rectangular shape allows for various installation patterns, such as herringbone or offset brick. Its reflective surface is easy to clean, making it a practical and stylish choice for kitchen walls.",
     "image": "https://i.ibb.co.com/mFBRSS11/Gemini-Generated-Image-hafns5hafns5hafn.png",
     "category": "ceramic",
     "price": 12.50,
