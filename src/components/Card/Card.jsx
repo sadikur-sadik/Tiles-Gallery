@@ -17,11 +17,11 @@ const Card = (tile) => {
     material,
     inStock } = tile.tile
   return (
-    <div className="bg-white shadow-md hover:shadow-2xl rounded-xl p-6">
+    <div className="bg-white shadow-md hover:shadow-2xl rounded-xl p-6 max-w-80">
       <div className="space-y-4">
         <div className="border-2 rounded-xl"><Image src={image} alt={title} height={60} width={60} className="h-40 w-full object-cover rounded-xl"></Image></div>
         <div className="space-y-2 ">
-          <h1 className="font-bold text-xl h-5  ">{title}</h1>
+          <h1 className="font-bold text-xl h-12">{title}</h1>
           <p className="text-md text-gray-400 h-15 ">{description}</p>
 
           <div className="relative h-5">
