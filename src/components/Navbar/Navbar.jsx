@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className="container mx-auto">
  
-      <div className="navbar bg-base-200 shadow-sm rounded-md lg:mb-48 mt-4">
+      <div className="navbar p-4">
         
 
         <div className="navbar-start">
@@ -55,3 +55,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
