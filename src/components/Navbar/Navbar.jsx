@@ -46,9 +46,11 @@ const Navbar = () => {
                 Sign Out
               </button>
             ) : (
-              <button className="btn btn-primary btn-sm" onClick={() => setSign(true)}>
-                Sign In
-              </button>
+              <Link href="/login">
+                <button className="btn btn-primary btn-sm" onClick={() => setSign(true)}>
+                  Sign In
+                </button>
+              </Link>
             )}
           </div>
         </div>
