@@ -1,5 +1,5 @@
 import dns from "node:dns";
-dns.setServers(['8.8.8.8','8.8.4.4'])
+dns.setServers(['8.8.8.8', '8.8.4.4'])
 
 import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
@@ -15,4 +15,10 @@ export const auth = betterAuth({
   emailAndPassword: {
     enabled: true,
   },
+  user: {
+    changeEmail: {
+      enabled: true,
+      updateEmailWithoutVerification: true
+    }
+  }
 });

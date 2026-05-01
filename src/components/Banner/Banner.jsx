@@ -26,7 +26,7 @@ const Banner = () => {
           
           <div className='flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-3'>
             <button className='btn flex items-center justify-center gap-2 border hover:bg-blue-800 hover:text-white border-blue-800 p-6 text-blue-800 font-bold rounded-full'>
-              <Link href="/" className="flex items-center gap-2">
+              <Link href="/register" className="flex items-center gap-2">
                 GET STARTED <HiArrowRight />
               </Link>
             </button>

@@ -1,6 +1,7 @@
 'use client'
 
 import { authClient } from "@/lib/auth-client";
+import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { IoEyeOff } from "react-icons/io5";
@@ -67,6 +68,9 @@ const Register = () => {
           </fieldset>
 
           <button className="btn btn-neutral mt-4 w-full">Sign up</button>
+          <div className="flex items-center gap-2 text-gray-400 my-3">
+           <span> Already have account ?</span><Link href="/login" className="text-red-600">Click to login</Link>
+          </div>
           <div className="flex items-center my-4">
             <div className="grow border-t border-gray-300"></div>
             <span className="shrink mx-4 text-gray-400">or</span>
