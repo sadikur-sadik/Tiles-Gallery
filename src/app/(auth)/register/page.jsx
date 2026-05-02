@@ -2,6 +2,7 @@
 
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { IoEyeOff } from "react-icons/io5";
@@ -10,7 +11,8 @@ import { Bounce, toast } from "react-toastify";
 
 
 const Register = () => {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -56,7 +58,7 @@ const Register = () => {
       }
       );
     }
-
+    router.push("/home");
   }
 
   const signInGoogle = async () => {
