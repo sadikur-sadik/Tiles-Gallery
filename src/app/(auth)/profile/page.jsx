@@ -4,9 +4,28 @@ import Image from "next/image";
 import defaultImage from "./../../../assets/default.jpg"
 import { FaPenFancy, FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import Link from "next/link";
+import { Bounce, toast } from "react-toastify";
 
 const Profile = () => {
   const { data } = authClient.useSession();
+
+  const handleEdit = () => {
+
+    if(!data){
+      toast.error('You do not have any account.Sign in first !', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      }
+    );
+    }
+  }
 
   return (
     <div className="w-full pb-10">
@@ -37,7 +56,7 @@ const Profile = () => {
         <div className="flex justify-between items-center border-b border-gray-300 pb-5">
           <div className="text-lg md:text-xl font-bold">Profile Details</div>
           <Link href={data ? "/update/profile " : "/login"}>
-            <button className="flex items-center gap-2 md:gap-3 bg-blue-800 text-white text-sm md:text-base font-bold px-3 py-2 rounded-md">
+            <button onClick={handleEdit } className="flex items-center gap-2 md:gap-3 bg-blue-800 text-white text-sm md:text-base font-bold px-3 py-2 rounded-md">
               <span>Edit Profile</span><FaPenFancy />
             </button>
           </Link>

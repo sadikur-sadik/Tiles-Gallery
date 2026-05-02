@@ -56,7 +56,7 @@ const Card = (tile) => {
 
       <div>
         <Link href={`/all-tiles/${id}`}>
-          <button className="btn btn-success w-full rounded-full mt-5 flex gap-1 items-center justify-center text-white font-bold border-none">
+          <button className="btn bg-blue-800 w-full rounded-full mt-5 flex gap-1 items-center justify-center text-white font-bold border-none">
             <span>VIEW DETAILS</span><MdArrowForward className="h-5 w-5" />
           </button>
         </Link>

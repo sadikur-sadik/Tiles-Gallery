@@ -2,30 +2,30 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='bg-blue-950'>
-      <div className='md:text-4xl text-2xl text-center text-white my-10'>
+    <footer className='bg-blue-950 p-20'>
+      <div className='md:text-4xl text-2xl text-center text-white '>
         Tiles Gallery
       </div>
-      <div className="grid md:grid-cols-3 grid-cols-1 p-4">
-        <nav className='flex justify-between items-center flex-col gap-3 text-white'>
-          <h6 className="">Explore</h6>
-          <a className="">Features</a>
-          <a className="">Enterprise</a>
-          <a className="">Security</a>
-          <a className="">Pricing</a>
+      <div className="grid md:grid-cols-3 grid-cols-1 p-6 mt-5">
+        <nav className='flex justify-between items-center flex-col gap-3 mt-10 text-white'>
+          <h6 className="font-bold text-2xl">Explore</h6>
+          <a className="text-sm font-bold">Features</a>
+          <a className="text-sm font-bold">Enterprise</a>
+          <a className="text-sm font-bold">Security</a>
+          <a className="text-sm font-bold">Pricing</a>
         </nav>
-        <nav className='flex justify-between items-center flex-col gap-3 text-white'>
-          <h6 className="">Legal</h6>
-          <a className="">Terms of use</a>
-          <a className="">Privacy policy</a>
-          <a className="">Cookie policy</a>
+        <nav className='flex justify-between items-center flex-col gap-3 mt-10 text-white'>
+          <h6 className="font-bold text-2xl">Legal</h6>
+          <a className="text-sm font-bold">Terms of use</a>
+          <a className="text-sm font-bold">Privacy policy</a>
+          <a className="text-sm font-bold">Cookie policy</a>
         </nav>
-        <nav className='flex justify-between items-center flex-col gap-3 text-white'>
-          <h6 className="">Social</h6>
-          <a className="">Twitter</a>
-          <a className="">Instagram</a>
-          <a className="">Facebook</a>
-          <a className="">GitHub</a>
+        <nav className='flex justify-between items-center flex-col gap-3 mt-10 text-white'>
+          <h6 className="font-bold text-2xl">Social</h6>
+          <a className="text-sm font-bold">Twitter</a>
+          <a className="text-sm font-bold">Instagram</a>
+          <a className="text-sm font-bold">Facebook</a>
+          <a className="text-sm font-bold">GitHub</a>
         </nav>
 
 
