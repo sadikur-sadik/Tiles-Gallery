@@ -36,7 +36,7 @@ const Profile = () => {
       <div className="max-w-[90%] md:w-150 lg:w-200 my-10 mx-auto border border-gray-300 p-4 md:p-6 rounded-2xl md:rounded-4xl">
         <div className="flex justify-between items-center border-b border-gray-300 pb-5">
           <div className="text-lg md:text-xl font-bold">Profile Details</div>
-          <Link href="/update/profile">
+          <Link href={data ? "/update/profile " : "/login"}>
             <button className="flex items-center gap-2 md:gap-3 bg-blue-800 text-white text-sm md:text-base font-bold px-3 py-2 rounded-md">
               <span>Edit Profile</span><FaPenFancy />
             </button>
@@ -47,7 +47,7 @@ const Profile = () => {
        
           <div className="flex flex-col md:flex-row md:gap-25 md:items-center">
             <p className="font-bold w-20">ID</p>
-            <p className="text-gray-700 truncate">{data?.user?.id.slice(0, 5) || "N/A"}</p>
+            <p className="text-gray-700 truncate">{data?.user?.id.slice(5, 10) || "N/A"}</p>
           </div>
 
         
