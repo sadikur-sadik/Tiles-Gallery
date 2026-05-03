@@ -4,10 +4,10 @@ import { MdArrowForward } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
 import { Bounce, toast } from "react-toastify";
-import { useSession } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 
 const Card = (tile) => {
-    const {data} = useSession()
+   const { data } = authClient.useSession();
     const handleToast = () => {
     toast.error('You do not have an account! Sign in first.', {
       position: "top-center",
@@ -35,7 +35,7 @@ const Card = (tile) => {
     inStock } = tile.tile
 
   return (
-    <div className="bg-white shadow-md hover:shadow-2xl rounded-xl p-6 max-w-80 flex flex-col justify-between">
+    <div className="bg-white  hover:scale-101 duration-200 shadow-md hover:shadow-2xl rounded-xl p-6 max-w-80 flex flex-col justify-between">
       <div className="space-y-4">
         
         {/* Simple Rectangular Image Container */}
@@ -44,7 +44,7 @@ const Card = (tile) => {
             src={image} 
             alt={title} 
             fill
-            className="object-cover"
+            className="object-cover hover:scale-115 duration-200"
           />
         </div>
 
@@ -74,7 +74,7 @@ const Card = (tile) => {
 
       <div>
         <Link href={`/all-tiles/${id}`}>
-          <button onClick={!data && handleToast} className="btn bg-blue-800 w-full rounded-full mt-5 flex gap-1 items-center justify-center text-white font-bold border-none">
+          <button onClick={!data ? handleToast : undefined} className="btn  hover:scale-105 duration-200 bg-blue-800 w-full rounded-full mt-5 flex gap-1 items-center justify-center text-white font-bold border-none">
             <span>VIEW DETAILS</span><MdArrowForward className="h-5 w-5" />
           </button>
         </Link>

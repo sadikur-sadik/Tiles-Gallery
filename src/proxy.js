@@ -1,8 +1,20 @@
+import { headers } from 'next/headers'
 import { NextResponse } from 'next/server'
-export function proxy(request) {
-  return NextResponse.redirect(new URL('/login', request.url))
+import { auth } from './lib/auth'
+
+export async function proxy(request) {
+  const session = await auth.api.getSession({
+    headers: await headers()
+  })
+
+  if (session) {
+    return NextResponse.next()
+  }
+  else {
+    return NextResponse.redirect(new URL('/login', request.url))
+  }
 }
- 
+
 export const config = {
-  matcher: ['/all-tiles/:path','/profile','/update']
+  matcher: ['/all-tiles/:path', '/profile', '/update']
 }
