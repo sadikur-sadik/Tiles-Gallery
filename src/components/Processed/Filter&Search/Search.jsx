@@ -17,7 +17,7 @@ const Search = ({setSearch}) => {
             className='border border-gray-200 p-2 rounded-md w-full focus:outline-blue-800'
           />
         </div>
-        <button onClick={handleSearch} className='btn bg-blue-800 hover:bg-blue-900 text-white w-full sm:w-auto md:w-1/5 flex items-center justify-center gap-2 px-6'>
+        <button onClick={handleSearch} className='btn bg-blue-800 hover:bg-transparent border border-blue-800 hover:text-blue-800  text-white w-full sm:w-auto md:w-1/5 flex items-center justify-center gap-2 px-6'>
           <span className="text-sm font-bold">SEARCH</span>
           <ImSearch/>
         </button>

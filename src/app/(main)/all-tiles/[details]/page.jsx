@@ -25,8 +25,7 @@ const DetailsPage = async ({ params }) => {
 
   return (
     <div className="my-10 flex flex-col md:flex-row gap-10 container mx-auto px-4">
-      {/* Left Side: Image - Fixed to ensure large display */}
-      <div className="flex-1 flex justify-center items-start">
+      <div className="flex-1 flex justify-center items-start animate__animated animate__fadeInLeft">
         <div className="relative w-full h-125">
           <Image
             src={image}
@@ -37,12 +36,10 @@ const DetailsPage = async ({ params }) => {
           />
         </div>
       </div>
-
-      {/* Right Side: Content */}
-      <div className="flex-1">
+      <div className="flex-1 animate__animated animate__fadeInRight">
         <div className="space-y-8">
           <div className="space-y-4">
-            <p className="inline-flex items-center px-3 py-1 rounded-full bg-slate-900 border border-slate-800">
+            <p className="inline-flex items-center px-3 py-1 rounded-full bg-slate-900 border border-slate-800 animate__animated animate__pulse animate__infinite">
               <span className="w-2 h-2 mr-2 rounded-full bg-blue-500"></span>
               <span className="text-[12px] font-bold uppercase tracking-wider text-blue-200">
                 {category}

@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const NoCard = () => {
   return (
-    <div className="container mx-auto px-4 w-full flex flex-col items-center justify-center py-24">
+    <div className="container mx-auto px-4 w-full flex flex-col items-center justify-center py-24 animate__fadeIn animate__animated">
       <div className="max-w-sm w-full flex flex-col items-center">
         
         {/* Minimalist Icon */}

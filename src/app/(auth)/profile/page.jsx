@@ -29,13 +29,13 @@ const Profile = () => {
 
   return (
     <div className="w-full pb-10">
-      <div className="relative mb-20 md:mb-35">
+      <div className="relative mb-20 md:mb-35 animate__animated animate__fadeIn">
    
-        <div className="bg-blue-800 w-full h-[20vh] md:h-[30vh]"></div>
+        <div className="bg-linear-to-r from-blue-900 via-blue-700 to-sky-600 w-full h-[20vh] md:h-[30vh] "></div>
 
         <div className="absolute bottom-0 w-full flex justify-center translate-y-1/2">
    
-          <div className="relative h-40 w-40 md:h-60 md:w-60">
+          <div className="relative h-40  w-40 md:h-60 md:w-60 animate__animated animate__slideInDown">
             <Image
               src={data?.user?.image || defaultImage}
               fill
@@ -46,13 +46,12 @@ const Profile = () => {
         </div>
       </div>
 
-      {/* Name Section */}
-      <div className="text-xl md:text-2xl font-bold text-center text-blue-800 px-4">
+      <div className="text-xl md:text-2xl font-bold text-center bg-linear-to-r from-blue-900 via-blue-700 to-sky-600 bg-clip-text text-transparent px-4">
         {data?.user?.name || "N/A"}
       </div>
 
   
-      <div className="max-w-[90%] md:w-150 lg:w-200 my-10 mx-auto border border-gray-300 p-4 md:p-6 rounded-2xl md:rounded-4xl">
+      <div className="max-w-[90%] md:w-150 lg:w-200 my-10 mx-auto border border-gray-300 p-4 md:p-6 rounded-2xl  animate__animated animate__slideInUp md:rounded-4xl">
         <div className="flex justify-between items-center border-b border-gray-300 pb-5">
           <div className="text-lg md:text-xl font-bold">Profile Details</div>
           <Link href={data ? "/update/profile " : "/login"}>

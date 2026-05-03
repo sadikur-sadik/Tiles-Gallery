@@ -1,13 +1,13 @@
 "use client"
 import Link from "next/link";
 import { authClient } from "@/lib/auth-client"
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
-import defaultImage from "./../../assets/default.jpg"
+import defaultImage from "@/assets/default.jpg"
 import { Bounce, toast } from "react-toastify";
 
 const Navbar = () => {
-
+  const path = usePathname();
   const router = useRouter();
   const { data } = authClient.useSession();
 
@@ -40,50 +40,71 @@ const Navbar = () => {
         <div className="navbar py-4">
           <div className="navbar-start">
             <div className="dropdown">
-              <label tabIndex={0} className="btn btn-ghost lg:hidden p-0 mr-2">
+              <label tabIndex={0} className="btn btn-ghost md:hidden p-0 mr-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
               </label>
               <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
-                <li><Link href="/home">Home</Link></li>
-                <li><Link href="/all-tiles">All Tiles</Link></li>
-                <li onClick={!data ? handleToast : undefined}><Link href="/profile">My Profile</Link></li>
-              </ul>
-            </div>
-            <Link href="/" className="btn btn-ghost normal-case text-blue-800 text-lg md:text-2xl font-bold p-0">
-              Tiles Gallery
-            </Link>
-          </div>
-
-          <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">
-              <li><Link href="/home">Home</Link></li>
-              <li><Link href="/all-tiles">All Tiles</Link></li>
-              <li onClick={!data ? handleToast : undefined}><Link href="/profile">My Profile</Link></li>
-            </ul>
-          </div>
-
-          <div className="navbar-end">
-            <div className="flex gap-2 md:gap-5 items-center">
-              {data && (
-                <div className="block">
+                <li>{(
+                <div className="mb-1 sm:hidden justify-center items-center flex">
                   <Image
                     src={data?.user.image || defaultImage}
                     height={40}
                     width={40}
-                    className="object-cover rounded-full w-8 h-8 md:w-11 md:h-11"
+                    className="object-cover rounded-full w-12 h-12 border-3 border-blue-500"
+                    alt={data?.user.name || "User Image"}
+                  />
+                </div>)}</li>
+                <li><span className="text-blue-800 flex justify-center items-center font-bold mb-5">{data?.user?.name || 'N/A'}</span></li>
+                <li className={`hover:scale-105 transition-transform duration-200 ${path == "/home" ? "bg-linear-to-r from-blue-900 via-blue-700 to-blue-600 text-white rounded-md" : ""}`}><Link href="/home">Home</Link></li>
+                <li className={`hover:scale-105 transition-transform duration-200 ${path == "/all-tiles" ? "bg-linear-to-r from-blue-900 via-blue-700 to-blue-600 text-white rounded-md": ""}`}><Link href="/all-tiles">All Tiles</Link></li>
+                <li onClick={!data ? handleToast : undefined} className={`hover:scale-105 transition-transform duration-200 ${path == "/profile" ?"bg-linear-to-r from-blue-900 via-blue-700 to-blue-600 text-white rounded-md" : ""}`}><Link href="/profile">My Profile</Link></li>
+
+
+              </ul>
+            </div>
+            <div className="">
+              <Link href="/" className="btn btn-sm md:btn-md btn-ghost text-lg md:text-2xl font-bold p-0 flex gap-0 border border-blue-400 rounded-md overflow-hidden">
+                <span className="bg-linear-to-r from-blue-900 via-blue-700 to-sky-600 text-white px-2 md:px-4 h-full flex items-center justify-center">
+                  Tiles
+                </span>
+                <span className="bg-linear-to-r from-blue-900 via-blue-700 to-sky-600 bg-clip-text px-2 md:px-4 h-full flex items-center justify-center text-transparent">
+                  Gallery
+                </span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="navbar-center hidden md:flex ">
+            <ul className="menu menu-horizontal px-1">
+              <li className={`hover:scale-105 transition-transform duration-200 ${path == "/home" ? " border-b-2 border-blue-800" : ""}`}><Link href="/home">Home</Link></li>
+              <li className={`hover:scale-105 transition-transform duration-200 ${path == "/all-tiles" ? " border-b-2 border-blue-800" : ""}`}><Link href="/all-tiles">All Tiles</Link></li>
+              <li onClick={!data ? handleToast : undefined} className={`hover:scale-105 transition-transform duration-200 ${path == "/profile" ? " border-b-2 border-blue-800" : ""}`}><Link href="/profile">My Profile</Link></li>
+            </ul>
+          </div>
+
+
+          <div className="navbar-end">
+            <div className="flex gap-2 md:gap-5 items-center">
+              {(
+                <div className="sm:block hidden">
+                  <Image
+                    src={data?.user.image || defaultImage}
+                    height={40}
+                    width={40}
+                    className="object-cover rounded-full w-8 h-8 border-3 border-blue-500 md:w-11 md:h-11"
                     alt={data?.user.name || "User Image"}
                   />
                 </div>
               )}
               {data ? (
-                <button className="btn btn-sm md:btn-md font-bold bg-red-600 text-white px-2 md:px-4" onClick={handleSignOut}>
+                <button className="btn btn-sm md:btn-md font-bold bg-linear-to-r from-red-600 via-red-500 to-red-400 text-white px-2 md:px-4" onClick={handleSignOut}>
                   Sign Out
                 </button>
               ) : (
                 <Link href="/login">
-                  <button className="btn btn-sm md:btn-md font-bold bg-blue-800 text-white px-4 md:px-8">
+                  <button className="btn btn-sm md:btn-md font-bold bg-linear-to-r from-blue-900 via-blue-700 to-sky-600 text-white px-4 md:px-8">
                     Sign In
                   </button>
                 </Link>
