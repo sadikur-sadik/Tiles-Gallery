@@ -66,7 +66,7 @@ const Profile = () => {
        
           <div className="flex flex-col md:flex-row md:gap-25 md:items-center">
             <p className="font-bold w-20">ID</p>
-            <p className="text-gray-700 truncate">{data?.user?.id.slice(5, 10) || "N/A"}</p>
+            <p className="text-gray-700 truncate">{data?.user?.id && 'WEB'}{data?.user?.id.slice(5, 10).toUpperCase() || "N/A"}</p>
           </div>
 
         
