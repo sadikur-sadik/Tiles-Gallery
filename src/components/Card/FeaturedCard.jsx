@@ -3,8 +3,24 @@
 import { MdArrowForward } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
+import { useSession } from "@/lib/auth-client";
+import { Bounce, toast } from "react-toastify";
 
 const Card = (tile) => {
+  const { data } = useSession();
+  const handleToast = () => {
+    toast.error('You do not have an account! Sign in first.', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    })
+  }
   const { id,
     title,
     description,
@@ -19,12 +35,12 @@ const Card = (tile) => {
   return (
     <div className="bg-white shadow-md hover:shadow-2xl my-10 rounded-xl p-6 max-w-80 flex flex-col justify-between">
       <div className="space-y-4">
-        
+
         {/* Simple Rectangular Image Container */}
         <div className="w-50 h-48 mx-auto border-2 border-gray-100 rounded-xl overflow-hidden relative">
-          <Image 
-            src={image} 
-            alt={title} 
+          <Image
+            src={image}
+            alt={title}
             fill
             className="object-cover"
           />
@@ -37,7 +53,7 @@ const Card = (tile) => {
 
       <div>
         <Link href={`/all-tiles/${id}`}>
-          <button className="btn bg-blue-800 w-full rounded-full flex gap-1 items-center justify-center text-white font-bold border-none">
+          <button onClick={!data && handleToast} className="btn bg-blue-800 w-full rounded-full flex gap-1 items-center justify-center text-white font-bold border-none">
             <span>VIEW DETAILS</span><MdArrowForward className="h-5 w-5" />
           </button>
         </Link>

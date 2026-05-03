@@ -3,8 +3,26 @@
 import { MdArrowForward } from "react-icons/md";
 import Image from "next/image";
 import Link from "next/link";
+import { Bounce, toast } from "react-toastify";
+import { useSession } from "@/lib/auth-client";
 
 const Card = (tile) => {
+    const {data} = useSession()
+    const handleToast = () => {
+    toast.error('You do not have an account! Sign in first.', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    })
+  }
+
+
   const { id,
     title,
     description,
@@ -56,7 +74,7 @@ const Card = (tile) => {
 
       <div>
         <Link href={`/all-tiles/${id}`}>
-          <button className="btn bg-blue-800 w-full rounded-full mt-5 flex gap-1 items-center justify-center text-white font-bold border-none">
+          <button onClick={!data && handleToast} className="btn bg-blue-800 w-full rounded-full mt-5 flex gap-1 items-center justify-center text-white font-bold border-none">
             <span>VIEW DETAILS</span><MdArrowForward className="h-5 w-5" />
           </button>
         </Link>

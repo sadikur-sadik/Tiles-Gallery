@@ -4,11 +4,13 @@ import { authClient } from "@/lib/auth-client"
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import defaultImage from "./../../assets/default.jpg"
+import { Bounce, toast } from "react-toastify";
 
 const Navbar = () => {
 
   const router = useRouter();
   const { data } = authClient.useSession();
+
   const handleSignOut = async () => {
     await authClient.signOut({
       fetchOptions: {
@@ -17,6 +19,19 @@ const Navbar = () => {
         },
       },
     });
+  }
+  const handleToast = () => {
+    toast.error('You do not have an account! Sign in first.', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    })
   }
 
   return (
@@ -33,7 +48,7 @@ const Navbar = () => {
               <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
                 <li><Link href="/home">Home</Link></li>
                 <li><Link href="/all-tiles">All Tiles</Link></li>
-                <li><Link href="/profile">My Profile</Link></li>
+                <li onClick={!data && handleToast}><Link href="/profile">My Profile</Link></li>
               </ul>
             </div>
             <Link href="/" className="btn btn-ghost normal-case text-blue-800 text-lg md:text-2xl font-bold p-0">
@@ -45,7 +60,7 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1">
               <li><Link href="/home">Home</Link></li>
               <li><Link href="/all-tiles">All Tiles</Link></li>
-              <li><Link href="/profile">My Profile</Link></li>
+              <li onClick={!data && handleToast}><Link href="/profile">My Profile</Link></li>
             </ul>
           </div>
 
@@ -53,11 +68,11 @@ const Navbar = () => {
             <div className="flex gap-2 md:gap-5 items-center">
               {data && (
                 <div className="block">
-                  <Image 
-                    src={data?.user.image || defaultImage} 
-                    height={40} 
-                    width={40} 
-                    className="object-cover rounded-full w-8 h-8 md:w-11 md:h-11" 
+                  <Image
+                    src={data?.user.image || defaultImage}
+                    height={40}
+                    width={40}
+                    className="object-cover rounded-full w-8 h-8 md:w-11 md:h-11"
                     alt={data?.user.name || "User Image"}
                   />
                 </div>
