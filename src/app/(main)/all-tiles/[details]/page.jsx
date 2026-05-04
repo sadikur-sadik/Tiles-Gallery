@@ -13,6 +13,7 @@ const DetailsPage = async ({ params }) => {
   const {
     id,
     title,
+    creator,
     description,
     image,
     category,
@@ -86,6 +87,10 @@ const DetailsPage = async ({ params }) => {
         <div className="border border-gray-200 p-8 mt-10 rounded-xl bg-gray-50">
           <h2 className="font-extrabold text-xl mb-4">Product Specification</h2>
           <div className="space-y-3">
+            <p className="flex justify-between border-b border-gray-200 pb-2">
+              <span className="font-bold text-gray-700">Creator:</span>
+              <span className="text-gray-500">{creator}</span>
+            </p>
             <p className="flex justify-between border-b border-gray-200 pb-2">
               <span className="font-bold text-gray-700">Dimensions:</span>
               <span className="text-gray-500">{dimensions}</span>
