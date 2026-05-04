@@ -35,7 +35,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="border-b border-gray-200">
+    <div className="border-b border-gray-200 animate__animated animate__fadeInDown">
       <div className="container mx-auto px-4 md:px-0">
         <div className="navbar py-4">
           <div className="navbar-start">
