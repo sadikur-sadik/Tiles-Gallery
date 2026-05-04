@@ -49,8 +49,8 @@ const Card = (tile) => {
         </div>
 
         <div className="space-y-2">
-          <h1 className="font-bold text-xl h-12 line-clamp-2">{title}</h1>
-          <p className="text-md text-gray-400 h-12">
+          <h1 className="font-bold text-xl h-13 line-clamp-2">{title}</h1>
+          <p className="text-md text-gray-400 h-13">
             <span className="line-clamp-2">{description}</span>
           </p>
 
