@@ -20,8 +20,7 @@ const HomePage = async () => {
         </div>
      
     </div >
-
-
+ 
   );
 };
 
