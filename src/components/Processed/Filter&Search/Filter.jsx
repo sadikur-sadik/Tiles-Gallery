@@ -16,7 +16,7 @@ const Filter = ({filter , setFilter}) => {
         </div>
         <ul
           tabIndex={-1}
-          className="dropdown-content menu bg-base-100 rounded-box z-10 w-full md:w-52 p-2 shadow-xl border border-gray-100"
+          className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow-xl border border-gray-100"
         >
           <li onClick={()=>setFilter("All")}><a className="hover:bg-blue-50">All</a></li>
           <li onClick={()=>setFilter("Ceramic")}><a className="hover:bg-blue-50">Ceramic</a></li>

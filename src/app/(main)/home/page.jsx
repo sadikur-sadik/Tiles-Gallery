@@ -1,23 +1,22 @@
-import FeaturedCard from "@/components/Card/FeaturedCard"
-import { AllTilesData } from "@/lib/data";
+import About from "@/components/About/About";
+import Banner from "@/components/Banner/Banner";
+import Footer from "@/components/Footer/Footer";
+import HomePage from "@/components/Home/Home";
+import MarqueePage from "@/components/Marquee/MarqueePage";
+import Navbar from "@/components/Navbar/Navbar";
 
-
-const HomePage = async () => {
-
-  const tiles = await AllTilesData();
-
-
+const HomePageData = async () => {
   return (
-    <div className="container mx-auto animate__animated animate__bounceIn">
-      <h1 className="md:text-4xl text-xl bg-linear-to-r from-blue-900 via-blue-700 to-sky-600 bg-clip-text text-transparent font-bold text-center my-10">Featured Tiles</h1>
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2 mb-10 justify-items-center ">
-        {tiles.slice(0, 2).map((tile, i) => <FeaturedCard key={i} tile={tile} />)}
-        {tiles.slice(3, 5).map((tile, i) => <FeaturedCard key={i} tile={tile}  />)}
-
-      </div >
-    </div >
+    <>
+      <Navbar/>
+      <Banner/>
+      <MarqueePage/>
+      <HomePage></HomePage>
+      <About/>
+      <Footer/>
+    </>
 
   );
 };
 
-export default HomePage;
+export default HomePageData;

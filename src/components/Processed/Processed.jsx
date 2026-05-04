@@ -41,14 +41,14 @@ const Processed = ({ tiles }) => {
             <div className='container mx-auto'><NoCard></NoCard></div>
             :
             (
-              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2 mb-10 justify-items-center">
+              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2  mb-10 justify-items-center">
 
                 {finalTiles ? finalTiles.map((tile, i) => <Card key={i} tile={tile} />) : tiles.map((tile, i) => <Card key={i} tile={tile} />)}
               </div>
             )
         }
       </div>
-      {/*  */}
+      
 
     </div>
   );

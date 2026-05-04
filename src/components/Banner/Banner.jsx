@@ -8,7 +8,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 const Banner = () => {
   return (
     
-    <div className='flex flex-col-reverse md:flex-row items-center h-auto md:h-150 container mx-auto my-10 border rounded-2xl overflow-hidden'>
+    <div className='flex flex-col-reverse md:flex-row items-center h-auto md:h-150 sm:w-full w-11/12 container mx-auto my-10 border rounded-2xl overflow-hidden'>
       
       
       <div className="flex-1 h-auto md:h-150 flex justify-center items-center p-10 md:p-0 animate__animated animate__fadeInLeft">

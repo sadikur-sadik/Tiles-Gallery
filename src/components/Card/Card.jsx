@@ -35,7 +35,7 @@ const Card = (tile) => {
     inStock } = tile.tile
 
   return (
-    <div className="bg-white border-b-3 border-b-blue-700 hover:scale-101 duration-200 shadow-md hover:shadow-2xl rounded-xl p-6 max-w-80 flex flex-col justify-between">
+    <div className="bg-white border-b-3 border-b-blue-700 hover:scale-101 w-11/12 sm:w-auto  duration-200 shadow-md hover:shadow-2xl rounded-xl p-6 max-w-80 flex flex-col justify-between">
       <div className="space-y-4">
         
         {/* Simple Rectangular Image Container */}
@@ -49,8 +49,8 @@ const Card = (tile) => {
         </div>
 
         <div className="space-y-2">
-          <h1 className="font-bold text-xl h-12 line-clamp-2">{title}</h1>
-          <p className="text-md text-gray-400 h-12">
+          <h1 className="font-bold text-xl h-13 line-clamp-2">{title}</h1>
+          <p className="text-md text-gray-400 h-13">
             <span className="line-clamp-2">{description}</span>
           </p>
 
