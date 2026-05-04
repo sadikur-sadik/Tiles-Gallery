@@ -35,7 +35,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="border-b border-gray-200 animate__animated animate__fadeInDown">
+    <div className="border-b border-gray-200">
       <div className="container mx-auto px-4 md:px-0">
         <div className="navbar py-4">
           <div className="navbar-start">
@@ -64,7 +64,7 @@ const Navbar = () => {
 
               </ul>
             </div>
-            <div className="">
+            <div className="animate__animated animate__fadeInDown">
               <Link href="/" className="btn btn-sm md:btn-md btn-ghost text-lg md:text-2xl font-bold p-0 flex gap-0 border border-blue-400 rounded-md overflow-hidden">
                 <span className="bg-linear-to-r from-blue-900 via-blue-700 to-sky-600 text-white px-2 md:px-4 h-full flex items-center justify-center">
                   Tiles
@@ -76,7 +76,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="navbar-center hidden md:flex ">
+          <div className="navbar-center hidden md:flex animate__animated animate__fadeInDown">
             <ul className="menu menu-horizontal px-1">
               <li className={`hover:scale-105 transition-transform duration-200 ${path == "/home" ? " border-b-2 border-blue-800" : ""}`}><Link href="/home">Home</Link></li>
               <li className={`hover:scale-105 transition-transform duration-200 ${path == "/all-tiles" ? " border-b-2 border-blue-800" : ""}`}><Link href="/all-tiles">All Tiles</Link></li>
@@ -85,7 +85,7 @@ const Navbar = () => {
           </div>
 
 
-          <div className="navbar-end">
+          <div className="navbar-end animate__animated animate__fadeInDown">
             <div className="flex gap-2 md:gap-5 items-center">
               {(
                 <div className="sm:block hidden">
