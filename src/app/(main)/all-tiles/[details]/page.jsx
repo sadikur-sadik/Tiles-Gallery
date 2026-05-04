@@ -23,7 +23,7 @@ const DetailsPage = async ({ params }) => {
     material,
     inStock,
   } = tile;
-
+  
   return (
     <div className="my-10 flex flex-col md:flex-row gap-10 container mx-auto px-4">
       <div className="flex-1 flex justify-center items-start animate__animated animate__fadeInLeft">
