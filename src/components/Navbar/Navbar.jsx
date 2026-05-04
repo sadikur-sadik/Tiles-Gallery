@@ -45,7 +45,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
                 </svg>
               </label>
-              <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
+              <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow  bg-base-100 rounded-box w-52">
                 <li>{(
                 <div className="mb-1 sm:hidden justify-center items-center flex">
                   <Image
@@ -56,7 +56,7 @@ const Navbar = () => {
                     alt={data?.user.name || "User Image"}
                   />
                 </div>)}</li>
-                <li><span className="text-blue-800 flex justify-center items-center font-bold mb-5">{data?.user?.name || 'N/A'}</span></li>
+                <li className=""><span className="text-blue-800 flex justify-center items-center font-bold mb-5">{data?.user?.name }</span></li>
                 <li className={`hover:scale-105 transition-transform duration-200 ${path == "/home" ? "bg-linear-to-r from-blue-900 via-blue-700 to-blue-600 text-white rounded-md" : ""}`}><Link href="/home">Home</Link></li>
                 <li className={`hover:scale-105 transition-transform duration-200 ${path == "/all-tiles" ? "bg-linear-to-r from-blue-900 via-blue-700 to-blue-600 text-white rounded-md": ""}`}><Link href="/all-tiles">All Tiles</Link></li>
                 <li onClick={!data ? handleToast : undefined} className={`hover:scale-105 transition-transform duration-200 ${path == "/profile" ?"bg-linear-to-r from-blue-900 via-blue-700 to-blue-600 text-white rounded-md" : ""}`}><Link href="/profile">My Profile</Link></li>
@@ -78,9 +78,9 @@ const Navbar = () => {
 
           <div className="navbar-center hidden md:flex animate__animated animate__fadeInDown">
             <ul className="menu menu-horizontal px-1">
-              <li className={`hover:scale-105 transition-transform duration-200 ${path == "/home" ? " border-b-2 border-blue-800" : ""}`}><Link href="/home">Home</Link></li>
-              <li className={`hover:scale-105 transition-transform duration-200 ${path == "/all-tiles" ? " border-b-2 border-blue-800" : ""}`}><Link href="/all-tiles">All Tiles</Link></li>
-              <li onClick={!data ? handleToast : undefined} className={`hover:scale-105 transition-transform duration-200 ${path == "/profile" ? " border-b-2 border-blue-800" : ""}`}><Link href="/profile">My Profile</Link></li>
+              <li className={`hover:scale-105 transition-transform duration-200 bg-linear-to-r font-bold from-blue-900 via-blue-700 to-blue-500 bg-clip-text text-transparent ${path == "/home" ? " border-b-2 border-blue-800" : ""}`}><Link href="/home">Home</Link></li>
+              <li className={`hover:scale-105 transition-transform duration-200 bg-linear-to-r font-bold from-blue-900 via-blue-700 to-blue-500 bg-clip-text text-transparent ${path == "/all-tiles" ? " border-b-2 border-blue-800" : ""}`}><Link href="/all-tiles">All Tiles</Link></li>
+              <li onClick={!data ? handleToast : undefined} className={`hover:scale-105 transition-transform font-bold bg-linear-to-r from-blue-900 via-blue-700 to-blue-500 bg-clip-text text-transparent duration-200 ${path == "/profile" ? " border-b-2 border-blue-800" : ""}`}><Link href="/profile">My Profile</Link></li>
             </ul>
           </div>
 

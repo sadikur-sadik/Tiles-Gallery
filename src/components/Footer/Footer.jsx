@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import React from 'react';
+import { FaBriefcase, FaEnvelope, FaFacebook, FaGithub, FaInstagram, FaPhoneAlt, FaRocket, FaShieldAlt, FaTags, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -9,23 +11,24 @@ const Footer = () => {
       <div className="grid md:grid-cols-3 grid-cols-1 p-6 mt-5">
         <nav className='flex justify-between items-center flex-col gap-3 mt-10 text-white'>
           <h6 className="font-bold text-2xl">Explore</h6>
-          <a className="text-sm font-bold">Features</a>
-          <a className="text-sm font-bold">Enterprise</a>
-          <a className="text-sm font-bold">Security</a>
-          <a className="text-sm font-bold">Pricing</a>
-        </nav>
-        <nav className='flex justify-between items-center flex-col gap-3 mt-10 text-white'>
-          <h6 className="font-bold text-2xl">Legal</h6>
-          <a className="text-sm font-bold">Terms of use</a>
-          <a className="text-sm font-bold">Privacy policy</a>
-          <a className="text-sm font-bold">Cookie policy</a>
+          <a className="text-sm font-bold flex items-center gap-2"><FaRocket />Features</a>
+          <a className="text-sm font-bold flex items-center gap-2"><FaBriefcase/>Enterprise</a>
+          <a className="text-sm font-bold flex items-center gap-2"><FaShieldAlt/>Security</a>
+          <a className="text-sm font-bold flex items-center gap-2"><FaTags />Pricing</a>
         </nav>
         <nav className='flex justify-between items-center flex-col gap-3 mt-10 text-white'>
           <h6 className="font-bold text-2xl">Social</h6>
-          <a className="text-sm font-bold">Twitter</a>
-          <a className="text-sm font-bold">Instagram</a>
-          <a className="text-sm font-bold">Facebook</a>
-          <a className="text-sm font-bold">GitHub</a>
+          <a className="text-sm font-bold flex items-center gap-2"><FaTwitter />Twitter</a>
+          <a className="text-sm font-bold flex items-center gap-2"><FaInstagram/> Instagram</a>
+          <a className="text-sm font-bold flex items-center gap-2"><FaFacebook />Facebook</a>
+          <a className="text-sm font-bold flex items-center gap-2"><FaGithub/>GitHub</a>
+        </nav>
+        <nav className='flex justify-between items-center flex-col gap-3 mt-10 text-white'>
+          <h6 className="font-bold text-2xl text-center">Contact Us</h6>
+          <a className="text-sm font-bold flex items-center gap-2"><FaEnvelope/>Email</a>
+          <a  className="text-sm font-bold flex items-center gap-2"><FaPhoneAlt/>Phone</a>
+          <a className="text-sm font-bold flex items-center gap-2"><FaWhatsapp />WhatsApp</a>
+          
         </nav>
 
 
