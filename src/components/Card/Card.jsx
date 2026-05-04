@@ -38,7 +38,7 @@ const Card = (tile) => {
     <div className="bg-white border-b-3 border-b-blue-700 hover:scale-101 w-11/12 md:w-auto  duration-200 shadow-md hover:shadow-2xl rounded-xl p-6 max-w-80 flex flex-col justify-between">
       <div className="space-y-4">
         
-        {/* Simple Rectangular Image Container */}
+        
         <div className="w-full h-48 border-2 border-gray-100 rounded-xl overflow-hidden relative">
           <Image 
             src={image} 
@@ -63,7 +63,7 @@ const Card = (tile) => {
               {
                 inStock
                   ?
-                  <div className="badge badge-success text-[10px] uppercase rounded-full text-white font-bold px-3 py-2">In Stock</div>
+                  <div className="badge badge-success text-[10px] uppercase rounded-full text-white font-bold lg:px-3 px-2 py-2">In Stock</div>
                   :
                   <div className="badge badge-error text-[10px] uppercase rounded-full text-white font-bold px-3 py-2">Stock Out</div>
               }

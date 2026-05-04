@@ -27,7 +27,7 @@ const Processed = ({ tiles }) => {
 
   return (
     <div>
-      <div className='grid grid-cols-1 md:grid-cols-12 my-4  px-2'>
+      <div className='grid grid-cols-1 md:grid-cols-12 my-4 px-2'>
 
         <Filter filter={filter} setFilter={setFilter}></Filter>
         <Search setSearch={setSearch}></Search>

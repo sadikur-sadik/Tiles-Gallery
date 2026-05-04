@@ -5,7 +5,7 @@ const Filter = ({filter , setFilter}) => {
 
 
   return (
-      <div className="dropdown dropdown-bottom dropdown-end md:dropdown-center col-span-1 py-3  md:col-span-4 lg:col-span-3 w-full">
+      <div className="dropdown dropdown-bottom dropdown-end md:dropdown-center col-span-1 py-3  md:col-span-4 lg:col-span-3 max-w-80 sm:max-w-full w-full mx-auto">
         <div
           tabIndex={0}
           role="button"

@@ -9,7 +9,7 @@ const Search = ({setSearch}) => {
   }
   return (
  
-      <div className='col-span-1 md:col-span-8 lg:col-span-9 flex flex-row items-center gap-0'>
+      <div className='col-span-1 md:col-span-8 lg:col-span-9 flex flex-row items-center gap-0 max-w-80 sm:max-w-full w-full mx-auto'>
         <div className='relative w-full md:w-4/5'>
           <input value={inp} onChange={(e)=>setInp(e.target.value)}
             type="text"
