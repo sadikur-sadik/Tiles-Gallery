@@ -5,11 +5,11 @@ const Filter = ({filter , setFilter}) => {
 
 
   return (
-      <div className="dropdown dropdown-bottom dropdown-end md:dropdown-center col-span-1 md:col-span-4 lg:col-span-3 w-full">
+      <div className="dropdown dropdown-bottom dropdown-end md:dropdown-center col-span-1 py-3  md:col-span-4 lg:col-span-3 w-full">
         <div
           tabIndex={0}
           role="button"
-          className="btn w-full bg-white border border-gray-200 rounded-md text-gray-500 font-medium flex justify-between items-center hover:bg-gray-50"
+          className="p-2 border w-full bg-transparent border-gray-200 rounded-md md:rounded-r-none text-gray-500 font-medium flex justify-between items-center hover:bg-gray-50"
         >
           <span>{filter}</span>
           <IoIosArrowDown />

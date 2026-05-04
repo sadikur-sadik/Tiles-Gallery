@@ -27,28 +27,29 @@ const Processed = ({ tiles }) => {
 
   return (
     <div>
-      <div className='grid grid-cols-1 md:grid-cols-12 my-4 gap-4 px-2'>
-
-        <Search setSearch={setSearch}></Search>
+      <div className='grid grid-cols-1 md:grid-cols-12 my-4  px-2'>
 
         <Filter filter={filter} setFilter={setFilter}></Filter>
+        <Search setSearch={setSearch}></Search>
+
+
       </div>
 
-      <div>
+      <div className='container mx-auto'>
         {
           finalTiles.length == 0
             ?
             <div className='container mx-auto'><NoCard></NoCard></div>
             :
             (
-              <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2  mb-10 justify-items-center">
+              <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-2  mb-10 justify-items-center">
 
                 {finalTiles ? finalTiles.map((tile, i) => <Card key={i} tile={tile} />) : tiles.map((tile, i) => <Card key={i} tile={tile} />)}
               </div>
             )
         }
       </div>
-      
+
 
     </div>
   );
